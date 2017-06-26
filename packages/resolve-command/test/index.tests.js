@@ -14,7 +14,9 @@ describe('resolve-command', () => {
 
     const aggregates = [
         {
-            initialState: {}, name: AGGREGATE_NAME, eventHandlers: {
+            initialState: {},
+            name: AGGREGATE_NAME,
+            eventHandlers: {
                 SuccessEvent: (state, event) => {
                     lastState = { ...state, value: 42 };
                     return lastState;

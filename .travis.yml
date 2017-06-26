@@ -31,7 +31,7 @@ install:
   - npm run bootstrap
 script:
   - npm run lint
-  - 'if [ "$(node_modules/.bin/prettier-eslint "./**/src/**/*.js" "./**/test/**/*.js" --list-different)" ]; then exit(1); fi'
+  - 'if [ "$(node_modules/.bin/prettier-eslint "./**/src/**/*.js" "./**/test/**/*.js" --list-different)" ]; then exit 1; fi'
   - npm test
   - cd examples/todo
   - npm run test:e2e -- --browser=chrome
